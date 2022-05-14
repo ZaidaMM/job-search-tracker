@@ -82,6 +82,14 @@ p {
   max-width: 40em;
 }
 
+hr {
+  border: 1px solid var(--primary-500);
+  margin-bottom: 1.38rem;
+}
+h1.under {
+  margin-bottom: 0;
+}
+
 h1,
 h2,
 h3,
