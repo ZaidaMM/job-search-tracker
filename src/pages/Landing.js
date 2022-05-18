@@ -1,5 +1,5 @@
-import main from '../assets/images/main-alternative.svg';
-import Wrapper from '../assets/wrappers/Testing';
+import main from '../assets/images/main-resume.svg';
+import Wrapper from '../assets/wrappers/LandingPage';
 
 const Landing = () => {
   return (

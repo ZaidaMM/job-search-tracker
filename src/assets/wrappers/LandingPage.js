@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Wrapper = styled.main`
   nav {
@@ -8,6 +8,10 @@ const Wrapper = styled.main`
     height: var(--nav-height);
     display: flex;
     align-items: center;
+  }
+  ${'' /* FOR LOGO - WILL BE UPDATED */}
+  span {
+    color: var(--primary-500);
   }
   .page {
     min-height: calc(100vh - var(--nav-height));
@@ -36,5 +40,5 @@ const Wrapper = styled.main`
       display: block;
     }
   }
-`
-export default Wrapper
+`;
+export default Wrapper;
