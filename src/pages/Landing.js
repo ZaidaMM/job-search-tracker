@@ -1,13 +1,12 @@
 import main from '../assets/images/main-resume.svg';
 import Wrapper from '../assets/wrappers/LandingPage';
+import { Logo } from '../components';
 
 const Landing = () => {
   return (
     <Wrapper>
       <nav>
-        <h5>
-          <span>JST</span> JobSearchTracker
-        </h5>
+        <Logo />
       </nav>
       <div className='container page'>
         <div className='info'>
