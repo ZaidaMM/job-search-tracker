@@ -1,3 +1,8 @@
+This is the frontend of the project.
+
+The repo with the rest of the projectm, including the server, is called job-search-tracker-mern.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
