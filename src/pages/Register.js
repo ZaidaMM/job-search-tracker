@@ -13,7 +13,8 @@ const initialState = {
 function Register() {
   const [values, setValues] = useState(initialState);
 
-  const state = useAppContext();
+  // Global state and useNavigate
+  const { isLoading, showAlert, displayAlert } = useAppContext();
 
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
@@ -24,6 +25,8 @@ function Register() {
   };
 
   const onSubmit = (e) => {
+    e.preventDefault();
+
     console.log(e.target);
   };
 
@@ -32,7 +35,7 @@ function Register() {
       <form className='form' onSubmit={onSubmit}>
         <Logo />
         <h3>{values.isMember ? 'Login' : 'Register'}</h3>
-        {values.showAlert && <Alert />}
+        {showAlert && <Alert />}
 
         {/* Name input */}
         {!values.isMember && (
@@ -41,7 +44,6 @@ function Register() {
             value={values.name}
             name='name'
             handleChange={handleChange}
-            className='form-input'
           />
         )}
 
@@ -51,7 +53,6 @@ function Register() {
           value={values.email}
           name='email'
           handleChange={handleChange}
-          className='form-input'
         />
 
         {/* Password input */}
@@ -60,7 +61,6 @@ function Register() {
           value={values.password}
           name='password'
           handleChange={handleChange}
-          className='form-input'
         />
         <button type='submit' className='btn btn-block'>
           Submit

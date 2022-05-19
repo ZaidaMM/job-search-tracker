@@ -6,10 +6,10 @@ const reducer = (state, action) => {
       ...state,
       showAlert: true,
       alertType: 'danger',
-      alertText: 'Please provide all values',
+      alertText: 'Please provide all values!',
     };
   }
-  throw new Error(`No such action :${action.type}`);
+  throw new Error(`No such action: ${action.type}`);
 };
 
 export default reducer;

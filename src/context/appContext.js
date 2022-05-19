@@ -1,15 +1,15 @@
-import React, { createContext, useContext, useReducer } from 'react';
+import React, { useContext, useReducer } from 'react';
 import reducer from './reducer';
 import { DISPLAY_ALERT } from './actions';
 
-export const initialState = {
+const initialState = {
   isLoading: false,
   showAlert: false,
   alertText: '',
   alertType: '',
 };
 
-export const AppContext = React.createContext();
+const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -20,7 +20,7 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      values={{
+      value={{
         ...state,
         displayAlert,
       }}
@@ -30,8 +30,8 @@ const AppProvider = ({ children }) => {
   );
 };
 
-export const useAppContext = () => {
+const useAppContext = () => {
   return useContext(AppContext);
 };
 
-export { AppProvider };
+export { AppProvider, initialState, useAppContext };
