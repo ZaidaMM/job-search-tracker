@@ -318,6 +318,10 @@ ul {
   color: var(--primary-500);
 }
 
+span {
+  color: var(--primary-500)
+}
+
 @media screen and (min-width: 992px) {
   .coffee-info {
     text-align: left;

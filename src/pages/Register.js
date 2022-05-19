@@ -1,25 +1,26 @@
 import { useEffect, useState } from 'react';
 import Wrapper from '../assets/wrappers/RegisterPage';
 import { Logo, FormRow, Alert } from '../components';
+import { useAppContext } from '../context/appContext';
 
 const initialState = {
   name: '',
   email: '',
   password: '',
   isMember: true,
-  showAlert: true,
 };
 
 function Register() {
   const [values, setValues] = useState(initialState);
+
+  const state = useAppContext();
 
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
   };
 
   const handleChange = (e) => {
-    console.log(e.target);
-    console.log(e.target.value);
+    setValues({ ...values, [e.target.name]: e.target.value });
   };
 
   const onSubmit = (e) => {

@@ -2,7 +2,7 @@
 
 const Logo = () => {
   return (
-    <h5>
+    <h5 className='text-small'>
       <span>JST</span> JobSearchTracker
     </h5>
   );
