@@ -26,8 +26,13 @@ function Register() {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    const { name, email, password, isMember } = values;
+    if (!email || !password || (!isMember && !name)) {
+      displayAlert();
+      return;
+    }
 
-    console.log(e.target);
+    console.log(values);
   };
 
   return (
