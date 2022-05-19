@@ -4,6 +4,10 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
+      <nav>
+        <Link to={'/'}>Dashboard</Link>
+        <Link to={'/landing'}>Home</Link>
+      </nav>
       <Routes>
         <Route path='/' exact element={<div>Dashboard</div>} />
         <Route path='/register' element={<div>Register</div>} />
