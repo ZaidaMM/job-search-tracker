@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import Wrapper from '../assets/wrappers/RegisterPage';
-import { Logo } from '../components';
-import FormRow from '../components/FormRow';
+import { Logo, FormRow, Alert } from '../components';
 
 const initialState = {
   name: '',
   email: '',
   password: '',
   isMember: true,
+  showAlert: true,
 };
 
 function Register() {
@@ -27,7 +27,7 @@ function Register() {
       <form className='form' onSubmit={onSubmit}>
         <Logo />
         <h3>Login</h3>
-
+        {values.showAlert && <Alert />}
         {/* Name input */}
         <FormRow
           type='text'
@@ -44,7 +44,6 @@ function Register() {
           handleChange={handleChange}
           className='form-input'
         />
-
         {/* Password input */}
         <FormRow
           type='password'
@@ -53,7 +52,6 @@ function Register() {
           handleChange={handleChange}
           className='form-input'
         />
-
         <button type='submit' className='btn btn-block'>
           Login
         </button>
